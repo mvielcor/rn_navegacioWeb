@@ -20,12 +20,13 @@ import {createStackNavigator} from 'react-navigation-stack';
 //2n Creem el Navigation Stack
 export const NavegadorDeLApp = createStackNavigator(
   {
-    Primera: PrimeraScreen,
-    Segona: SegonaScreen,
-    Tercera: TerceraScreen,
+    Primera: {screen: PrimeraScreen},
+    Segona: {screen: SegonaScreen},
+    Tercera: {screen: TerceraScreen},
   },
   {initialRoutename: 'Primera'},
 );
+
 //3r creem el contenidor de l'app per a suportar el botó back
 const AppContainer = createAppContainer(NavegadorDeLApp);
 
